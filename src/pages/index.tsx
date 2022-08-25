@@ -1,9 +1,5 @@
-const Home  = () => {
-	return (
-		<>
-			Hello World!
-		</>
-	)
-}
+import React from 'react'
+
+const Home: React.FC = () => <>Hello World!</>
 
 export default Home
