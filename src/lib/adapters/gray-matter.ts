@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 
 interface MatterAdapterResult {
   question: Question
-  content?: string
+  content: string
 }
 
 export const matterAdapter = (filePath: string, fileName: string): MatterAdapterResult => {
