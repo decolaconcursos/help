@@ -8,7 +8,7 @@ export interface Question {
   active?: boolean
   slug?: string
 
-  content?: string
+  content: string
 }
 
 export interface Questions {

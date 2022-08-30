@@ -5,12 +5,14 @@ import { getQuestionByCategories } from '@/lib/get-question-by-categories'
 export const getQuestionBySlug = (slug: string): Question => {
   const categories = getAllCategories()
 
-  let questions: Question[] = []
+  const questions: Question[] = []
 
   for (const category of categories) {
     const listOfArticles = getQuestionByCategories(category)
-
-    questions = listOfArticles.questions.filter(item => item.slug === slug)
+    const matchedQuestionIndex = listOfArticles.questions.findIndex(item => item.slug === slug)
+    if (typeof listOfArticles.questions[matchedQuestionIndex] !== 'undefined') {
+      questions.push(listOfArticles.questions[matchedQuestionIndex])
+    }
   }
 
   return questions[0]
