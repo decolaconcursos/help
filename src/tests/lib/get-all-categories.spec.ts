@@ -5,7 +5,7 @@ import { mocked } from 'jest-mock'
 jest.mock('fs')
 
 const getAllCategories = (): string[] => {
-  const categoriesPath = path.join(process.cwd(), 'src', 'categories')
+  const categoriesPath = path.join('src', 'categories')
 
   return fs.readdirSync(categoriesPath)
 }
@@ -24,8 +24,13 @@ describe('GetAllCategories Unit Test', () => {
   beforeEach(() => {
     sut = getAllCategories()
   })
-  it('Should return all folders on ./src/categories folders', () => {
+  it('should return all folders on ./src/categories folders', () => {
     expect(sut).toEqual(expectedFolder)
+  })
+
+  it('fs.readdirSync should be called with ./src/categories ', () => {
+    const fsSpy = jest.spyOn(fs, 'readdirSync')
+    expect(fsSpy).toHaveBeenCalledWith('src/categories')
   })
 })
 
