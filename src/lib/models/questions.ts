@@ -12,6 +12,6 @@ export interface Question {
 }
 
 export interface Questions {
-  categories: string
+  category: string
   questions: Question[]
 }
