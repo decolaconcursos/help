@@ -1,14 +1,8 @@
-import path from 'path'
 import * as fs from 'fs'
 import { mocked } from 'jest-mock'
+import { getAllCategories } from '@/lib/get-all-categories'
 
 jest.mock('fs')
-
-const getAllCategories = (): string[] => {
-  const categoriesPath = path.join('src', 'categories')
-
-  return fs.readdirSync(categoriesPath)
-}
 
 describe('GetAllCategories Unit Test', () => {
   let sut: string[]
