@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/decolaconcursos/help#readme",
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "^12.2.5",
     "next-mdx-remote": "^4.1.0",
     "react": "^18.2.0",
