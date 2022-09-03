@@ -10,14 +10,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   async rewrites () {
-    const a = glob.sync('*/*.mdx', { cwd: path.resolve(__dirname, 'src/pages/decola') })
+    return glob.sync('*/*.mdx', { cwd: path.resolve(__dirname, 'src/pages/decola') })
       .map((file) => file.replace(/\.mdx$/, ''))
       .map((file) => ({
         source: `/decola/${file.replace(/^[^/]+\//, '')}`,
         destination: `/decola/${file}`
       }))
-    console.log(a)
-    return a
   },
   poweredByHeader: false,
   pageExtensions: ['mdx', 'tsx', 'ts'],
