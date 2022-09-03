@@ -1,11 +1,15 @@
 import '../style/global.css'
-import React from 'react'
-import { AppProps } from 'next/app'
+import React, { Fragment } from 'react'
+import { AppPropsWithLayout } from 'next/app'
 
-export default function MyApp ({ Component, pageProps }: AppProps): JSX.Element {
+export default function MyApp ({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
+  const Layout = Component.Layout ?? Fragment
+  const layoutProps = Component.layoutProps ?? {}
+
   return (
-    <div className={'bg-sky-400'}>
+    <Layout {...layoutProps}>
       <Component {...pageProps} />
-    </div>
+    </Layout>
+
   )
 }
