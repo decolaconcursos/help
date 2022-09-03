@@ -42,6 +42,7 @@
     "simple-functional-loader": "^1.2.1"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "@types/jest": "^28.1.8",
     "@types/mdx": "^2.0.2",
     "@types/node": "^18.7.13",
