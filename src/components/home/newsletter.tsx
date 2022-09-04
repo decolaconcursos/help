@@ -12,7 +12,7 @@ export const Newsletter: React.FC<Props> = () => {
       <div className='absolute inset-0 bg-gradient-to-tr from-primary-900 to-primary-700'></div>
       <div className='flex '>
         <div className='w-2/3 relative max-w-lg '>
-          <h1 className='text-6xl font-extrabold text-white'>Cadastre-se na nossa Newsletter</h1>
+          <h1 className='text-5xl font-extrabold text-white'>Cadastre-se na nossa Newsletter</h1>
           <p className='mt-2 text-slate-300 '>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
           </p>

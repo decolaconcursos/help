@@ -44,7 +44,7 @@ export const ForcasArmadas: React.FC<Props> = ({ children }) => {
     <div className='max-w-5xl px-4 py-12 mx-auto mb-12'>
       <div className='flex flex-col items-center text-center'>
         <SectionTag >SEU CONCURSO</SectionTag>
-        <h1 className='mt-4 text-4xl font-extrabold'>
+        <h1 className='mt-4 text-4xl font-bold'>
           De qual força é o seu concurso?
         </h1>
         <div className={'mt-12 flex  divide-x-2 w-full'}>

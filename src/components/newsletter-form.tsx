@@ -7,12 +7,13 @@ type Props = {
 }
 
 export const NewsletterForm: React.FC<Props> = ({ formID = 3572924 }) => {
-  const actionUrl = `https://api.convertkit.com/v3/forms/${formID}/subscribe`
+  const actionUrl = `https://app.convertkit.com/forms/${formID}/subscriptions`
 
   return (<>
     <form action={actionUrl} method='post'>
       <div className='relative'>
         <div className='bg-white px-2 py-2 w-full flex rounded-md'>
+          <input type="hidden" id="myApiKey" name="myApiKey" value="myApiKeyValue" />
           <input type='email'
                  name="email_address"
                  aria-label="Endereço de Email"

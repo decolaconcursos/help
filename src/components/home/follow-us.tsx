@@ -13,7 +13,7 @@ export const FollowUs: React.FC<Props> = () => {
     <section id='follow-us'>
       <div className='max-w-5xl mx-auto py-16 text-center flex flex-col px-4 items-center'>
         <SectionTag color>SAIBA MAIS</SectionTag>
-        <h1 className='font-extrabold text-4xl mt-4'>
+        <h1 className='font-bold text-4xl mt-4'>
           Nos siga nas Redes Sociais
         </h1>
         <p className='max-w-2xl mx-auto mt-4'>
