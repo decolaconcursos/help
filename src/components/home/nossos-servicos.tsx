@@ -51,10 +51,10 @@ export const NossosServicos: React.FC<Props> = ({ children }) => {
         <h1 className='mt-4 text-4xl font-bold'>
           Sobre nossos serviços
         </h1>
-        <div className={'mt-12 grid grid-cols-3 gap-3 w-full'}>
+        <div className={'mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full'}>
 
           {categoriasList.map((item) => {
-            return <Link href={item.url}><Categoria word={item.title}/></Link>
+            return <Link href={item.url} key={item.title}><Categoria word={item.title}/></Link>
           })}
         </div>
       </div>

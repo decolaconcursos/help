@@ -47,8 +47,8 @@ export const ForcasArmadas: React.FC<Props> = ({ children }) => {
         <h1 className='mt-4 text-4xl font-bold'>
           De qual força é o seu concurso?
         </h1>
-        <div className={'mt-12 flex  divide-x-2 w-full'}>
-          {cardsList.map((item) => <FACard {...item} />)}
+        <div className={'mt-12 flex flex-col gap-12 sm:gap-8 md:gap-0 md:flex-row  md:divide-x-2 w-full'}>
+          {cardsList.map((item) => <FACard {...item} key={item.title + 'FA'} />)}
         </div>
       </div>
     </div>
@@ -59,13 +59,13 @@ type CardProps = Card
 
 export const FACard: React.FC<CardProps> = ({ content, locked, url, img, title }) => {
   return (
-  <div className={clsx('px-8 flex-1 group ', (locked ?? false) ? 'cursor-not-allowed select-none' : 'cursor-pointer')}>
+  <div className={clsx('md:px-8 flex-1 group ', (locked ?? false) ? 'cursor-not-allowed select-none' : 'cursor-pointer')}>
     <div className='relative flex justify-center '>
 
     </div>
-    <div className={clsx(!(locked ?? false) && 'shadow-md group-hover:shadow-lg', 'translate-y-0 animated h-44 bg-primary-500 rounded-xl relative overflow-hidden flex')}>
+    <div className={clsx(!(locked ?? false) && 'shadow-md group-hover:shadow-lg', 'translate-y-0 animated h-48 sm:h-60 md:h-44 bg-primary-500 rounded-xl relative overflow-hidden flex')}>
     {
-      (locked ?? false) && (<div className='absolute z-10 px-3 py-1 text-xs font-bold text-yellow-600 uppercase border-yellow-400 rounded-full opacity-[50%] group-hover:opacity-[100%] duration-500 border-px left-2 top-2 bg-yellow-50 backdrop-blur-md w-fit animated '>
+      (locked ?? false) && (<div className='absolute z-10 px-3 py-1 text-xs font-bold text-yellow-100 uppercase border-yellow-400 rounded-full  duration-500 border-px left-2 top-2 bg-yellow-200/50 backdrop-blur-md w-fit animated '>
       Em breve!
       </div>)
     }

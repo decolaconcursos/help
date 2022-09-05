@@ -20,8 +20,8 @@ export const NewsletterForm: React.FC<Props> = ({ formID = 3572924 }) => {
                  required
                  className='appearance-none font-semibold py-2 focus:outline-0 flex-1 pl-4 placeholder:font-semibold placeholder:text-slate-300'
                  placeholder='Digite seu Email'/>
-          <button className='rounded-md bg-primary-800 text-white h-auto px-4 font-bold uppercase hover:shadow hover:bg-primary-700 animated ml-2 '>
-            Cadastre-se
+          <button className='rounded-md bg-primary-800 text-xs md:text-md text-white h-auto px-4 font-bold uppercase hover:shadow hover:bg-primary-700 animated ml-2 '>
+            Cadastrar
           </button>
         </div>
       </div>
