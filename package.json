@@ -4,7 +4,7 @@
   "description": "Decola Concursos | Help Center",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next --port 8000",
     "build": "next build",
     "start": "next start",
     "test": "jest --passWithNoTests --no-cache",
@@ -29,8 +29,10 @@
   "homepage": "https://github.com/decolaconcursos/help#readme",
   "dependencies": {
     "@badrap/bar-of-progress": "^0.2.1",
+    "@headlessui/react": "^1.6.6",
     "@mdx-js/loader": "^2.1.3",
     "@next/bundle-analyzer": "^12.2.5",
+    "@notionhq/client": "^2.2.0",
     "clsx": "^1.2.1",
     "golb": "^0.0.9",
     "gray-matter": "^4.0.3",
