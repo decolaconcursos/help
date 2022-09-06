@@ -1,7 +1,7 @@
 // Create By: Lenderson on 9/3/2022
 
 import React from 'react'
-import { SectionTag } from '@/components/SectionTag'
+import { SectionTag } from '@/components/section-tag'
 import clsx from 'clsx'
 import Image from 'next/image'
 
@@ -40,7 +40,7 @@ const cardsList: Card[] = [
 ]
 
 export const ForcasArmadas: React.FC<Props> = ({ children }) => {
-  return (<section id='ffaa'>
+  return (<section id='ffaa' className='relative'>
     <div className='max-w-5xl px-4 py-12 mx-auto mb-12'>
       <div className='flex flex-col items-center text-center'>
         <SectionTag >SEU CONCURSO</SectionTag>

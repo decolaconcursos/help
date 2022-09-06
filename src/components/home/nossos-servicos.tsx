@@ -1,7 +1,7 @@
 // Create By: Lenderson on 9/3/2022
 
 import React from 'react'
-import { SectionTag } from '@/components/SectionTag'
+import { SectionTag } from '@/components/section-tag'
 import Link from 'next/link'
 
 type Props = {
